@@ -1,3 +1,4 @@
+#author napz
 def level_1():
     search = [
         {"name" : "Drupal", "strings" : ["block-views", "nodeblock", 'Drupal', 'misc/drupal.css','misc/drupal.js','modules/field/theme/field.css'], "header" : ["x-drupal-cache"] },
@@ -18,8 +19,8 @@ def level_1():
         {"name" : "Pimcore", "strings" : ["pimcore_area_"] , "header" : ["x-pimcore-output-cache-tag","x-pimcore-output-cache-date"], "header-value" : [{"x-powered-by":"pimcore"}]},
         {"name" : "Cotonti", "strings" : ["tags/tpl/tags.css", "m=passrecover", 'href="users?m=register"', 'action="register?a=add"']},
         {"name" : "Contao", "strings" : ["tl_files/images/", "ce_text", 'tl_files/design/"', '<!-- indexer::continue -->']},
-        {"name" : "CMS Made Simple", "strings" : ["/cmsms"]},        
-        
+        {"name" : "CMS Made Simple", "strings" : ["/cmsms"]},
+
     ]
     return search
 
