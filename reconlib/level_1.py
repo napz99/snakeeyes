@@ -22,7 +22,7 @@ def level_1():
         {"name" : "Contao", "strings" : ["tl_files/images/", "ce_text", 'tl_files/design/"', '<!-- indexer::continue -->']},
         {"name" : "CMS Made Simple", "strings" : ["/cmsms"]},
         {"name" : "Serendipity", "strings" : ["serendipity_entry_body", "serendipity_entry_author_Admin", "serendipity_entryFooter", "serendipityLeftSideBar", "serendipitySideBarContent"]},
-        {"name" : "Web2py", "strings" : ["w2p"], "header-value" : [{"x-powered-by":"web2py"}]}
+        {"name" : "Web2py", "strings" : ["w2p", "web2py_ajax_init()"], "header-value" : [{"x-powered-by":"web2py"}]}
     ]
     return search
 
@@ -38,7 +38,7 @@ def common_headers():
                "content-disposition", "content-range", "content-type", "date", "etag", "expires", "last-modified", "link"\
                "p3p", "pragrma", "proxy-authenticate", "refresh", "retry-after", "set-cookie", "status", "strict-transport-security", \
                "trailer", "transfer-encoding", "vary", "www-authenticate", "x-frame-options", "public-key-pins", "x-xss-protection",\
-               "content-security-policy", "x-webkit-csp", "x-content-type-options", "x-ua-compatible" ]
+               "content-security-policy", "x-webkit-csp", "x-content-type-options"]
     return headers
 
 def cms_list():
@@ -48,5 +48,5 @@ def cms_list():
     return cms
 
 def common_cookies():
-    cookies = ["domain_specified","path_specified", "secure", "expires", "discard", "comment", "comment_url"]
+    cookies = ["domain_specified","path_specified", "secure", "expires", "discard", "comment", "comment_url", "_now"]
     return cookies

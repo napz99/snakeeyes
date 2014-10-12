@@ -51,6 +51,7 @@ class snake_eyes():
         recon = self.init_request()
         if self.level >= 1:
             print "Performing level 1 scan :"
+            print "--------------------------------"
             self.level_1(recon)
 
     def level_1(self, recon):
@@ -71,10 +72,10 @@ class snake_eyes():
                     if  len(result) > 0:
                         self.score[y['name']]['level 1'] = self.score[y['name']]['level 1'] + 40
                         break
-
+        
         interesting_header = self.check_headers(recon.headers)
         interesting_cookies = self.check_cookies(recon.cookies.__dict__)
-
+        
         if len(interesting_cookies) > 0:
             for cookie_value in interesting_cookies:
                 print "Cookie :["+str(cookie_value)+"] | Value:["+str(interesting_cookies[cookie_value])+"]"
@@ -116,7 +117,6 @@ class snake_eyes():
         clean_cookies = set(request_cookies).intersection(cookies)
         resultlist_cookies= list(clean_cookies)
         for value in resultlist_cookies:
-            print value
             del request_cookies[value]
         return request_cookies
 
@@ -161,13 +161,16 @@ class snake_eyes():
 
     def certainty(self):
         x = Counter(self.score).most_common()
+        print "--------------------------------"
+        print "Result"
+        print "--------------------------------"
         if x[0][1]['level 1'] > 0:
             for y in x:
                 if y[1]['level 1'] >=40:
-                    print "--------------------------------"
                     print "Detected :[" + str(y[0]) +"]"
                     print "Level 1 of certainty: " + str(y[1]['level 1'])
                     print "Level 2 of certainty: " + str(y[1]['level 2'])
+                    print "--------------------------------"
             #print "Detected :[" + str(x[0]) +"]"
             #print "Level 1 of certainty: " + str(x[1]['level 1'])
             #print "Level 2 of certainty: " + str(x[1]['level 2'])
