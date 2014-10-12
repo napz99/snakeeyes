@@ -1,0 +1,4 @@
+snakeeyes
+=========
+
+Python CMS Detector
