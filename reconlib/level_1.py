@@ -21,7 +21,7 @@ def level_1():
         {"name" : "Cotonti", "strings" : ["tags/tpl/tags.css", "m=passrecover", 'href="users?m=register"', 'action="register?a=add"']},
         {"name" : "Contao", "strings" : ["tl_files/images/", "ce_text", 'tl_files/design/"', '<!-- indexer::continue -->']},
         {"name" : "CMS Made Simple", "strings" : ["/cmsms"]},
-        {"name" : "Serendipity", "strings" : ["serendipity_entry_body", "serendipity_entry_author_Admin", "serendipity_entryFooter", "serendipityLeftSideBar"]}
+        {"name" : "Serendipity", "strings" : ["serendipity_entry_body", "serendipity_entry_author_Admin", "serendipity_entryFooter", "serendipityLeftSideBar", "serendipitySideBarContent"]}
     ]
     return search
 

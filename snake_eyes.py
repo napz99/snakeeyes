@@ -160,11 +160,17 @@ class snake_eyes():
             return {"name" : None}
 
     def certainty(self):
-        x = Counter(self.score).most_common()[0]
-        if x[1]['level 1'] > 0:
-            print "Detected :[" + str(x[0]) +"]"
-            print "Level 1 of certainty: " + str(x[1]['level 1'])
-            print "Level 2 of certainty: " + str(x[1]['level 2'])
+        x = Counter(self.score).most_common()
+        if x[0][1]['level 1'] > 0:
+            for y in x:
+                if y[1]['level 1'] >=40:
+                    print "--------------------------------"
+                    print "Detected :[" + str(y[0]) +"]"
+                    print "Level 1 of certainty: " + str(y[1]['level 1'])
+                    print "Level 2 of certainty: " + str(y[1]['level 2'])
+            #print "Detected :[" + str(x[0]) +"]"
+            #print "Level 1 of certainty: " + str(x[1]['level 1'])
+            #print "Level 2 of certainty: " + str(x[1]['level 2'])
         else:
             print "No CMS Detected"
 
