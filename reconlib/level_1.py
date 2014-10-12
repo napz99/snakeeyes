@@ -1,4 +1,5 @@
 #author napz
+
 def level_1():
     search = [
         {"name" : "Drupal", "strings" : ["block-views", "nodeblock", 'Drupal', 'misc/drupal.css','misc/drupal.js','modules/field/theme/field.css'], "header" : ["x-drupal-cache"] },
@@ -20,7 +21,7 @@ def level_1():
         {"name" : "Cotonti", "strings" : ["tags/tpl/tags.css", "m=passrecover", 'href="users?m=register"', 'action="register?a=add"']},
         {"name" : "Contao", "strings" : ["tl_files/images/", "ce_text", 'tl_files/design/"', '<!-- indexer::continue -->']},
         {"name" : "CMS Made Simple", "strings" : ["/cmsms"]},
-
+        {"name" : "Serendipity", "strings" : ["serendipity_entry_body", "serendipity_entry_author_Admin", "serendipity_entryFooter", "serendipityLeftSideBar"]}
     ]
     return search
 
@@ -42,7 +43,7 @@ def common_headers():
 def cms_list():
     cms = ["Drupal", "WordPress", "Joomla", "Typo3", "SilverStripe", "Concrete5", "Moodle", "Tiki Wiki", \
            "Magento", "PmWiki", "MediaWiki","Zikula", "XOOPS", "Prestashop", "ProcessWire", "Pimcore", "Cotonti","Contao",\
-           "Jamroom", "CMS Made Simple"]
+           "Jamroom", "CMS Made Simple", "Serendipity"]
     return cms
 
 def common_cookies():
