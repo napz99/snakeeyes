@@ -21,7 +21,8 @@ def level_1():
         {"name" : "Cotonti", "strings" : ["tags/tpl/tags.css", "m=passrecover", 'href="users?m=register"', 'action="register?a=add"']},
         {"name" : "Contao", "strings" : ["tl_files/images/", "ce_text", 'tl_files/design/"', '<!-- indexer::continue -->']},
         {"name" : "CMS Made Simple", "strings" : ["/cmsms"]},
-        {"name" : "Serendipity", "strings" : ["serendipity_entry_body", "serendipity_entry_author_Admin", "serendipity_entryFooter", "serendipityLeftSideBar", "serendipitySideBarContent"]}
+        {"name" : "Serendipity", "strings" : ["serendipity_entry_body", "serendipity_entry_author_Admin", "serendipity_entryFooter", "serendipityLeftSideBar", "serendipitySideBarContent"]},
+        {"name" : "Web2py", "strings" : ["w2p"], "header-value" : [{"x-powered-by":"web2py"}]}
     ]
     return search
 
@@ -43,7 +44,7 @@ def common_headers():
 def cms_list():
     cms = ["Drupal", "WordPress", "Joomla", "Typo3", "SilverStripe", "Concrete5", "Moodle", "Tiki Wiki", \
            "Magento", "PmWiki", "MediaWiki","Zikula", "XOOPS", "Prestashop", "ProcessWire", "Pimcore", "Cotonti","Contao",\
-           "Jamroom", "CMS Made Simple", "Serendipity"]
+           "Jamroom", "CMS Made Simple", "Serendipity", "Web2py"]
     return cms
 
 def common_cookies():
