@@ -1,4 +1,5 @@
 #author napz
+
 import sys, requests
 import reconlib
 import re
@@ -79,13 +80,15 @@ class snake_eyes():
         if len(interesting_cookies) > 0:
             for cookie_value in interesting_cookies:
                 print "Cookie :["+str(cookie_value)+"] | Value:["+str(interesting_cookies[cookie_value])+"]"
+                
         #for header-value
         for y in x:
             if y.has_key("header-value"):
-                header_check = set(y['header-value'][0].keys()).intersection(interesting_header.keys())
-                if len(header_check) > 0:
-                    header_check = list(header_check)
-                    self.score[y['name']]['level 1'] = self.score[y['name']]['level 1'] + 40
+                for header_check in y['header-value']:
+                    if header_check.keys()[0] in interesting_header:
+                        if self.stringfinder(interesting_header[str(header_check.keys()[0])], header_check.values()[0]):
+                            self.score[y['name']]['level 1'] = self.score[y['name']]['level 1'] + 40
+                        
         #for header only
         for header_value in interesting_header:
             print "Header :["+ str(header_value) +"] | Value:["+str(interesting_header[header_value])+"]"
@@ -143,7 +146,7 @@ class snake_eyes():
             return 0
 
     def poweredby(self, response_content):
-        result = re.search('(?<=powered by )(<.*>+|[a-z]*)', response_content, re.IGNORECASE)
+        result = re.search('(?<=powered by )(<.*>+|[0-9a-z]*)', response_content, re.IGNORECASE)
         try:
             power = result.group(0)
             for name in reconlib.cms_list():

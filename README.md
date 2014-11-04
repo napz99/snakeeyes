@@ -1,7 +1,13 @@
-SnakeEyes a Python CMS Detector
+SnakeEyes a Python Web Fingerprinting tool 
 
+***************************************
+Required modules:
+    requests, BeautifulSoup
+
+
+***************************************
 usage :
-python snake_eyes.py http://target url
+    python snake_eyes.py http://target url
 
 ***************************************
 
@@ -20,6 +26,5 @@ Features:
 ***************************************
 
 contributor:
-
-napz
+    napz
 
